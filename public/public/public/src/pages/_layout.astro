@@ -1,0 +1,39 @@
+---
+const {
+  title = "ReinSolutions",
+  description = "Conscious AI agency for future-ready businesses."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <strong>ReinSolutions</strong>
+      </div>
+      <nav>
+        <a href="/" aria-current="page">Home</a>
+        <a href="/services">Services</a>
+        <a href="/cases">Cases</a>
+        <a href="/offer">Offer</a>
+        <a href="/hub">Hub</a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      ReinSolutions · Conscious AI & automation studio · Rochester Hills, MI
+    </footer>
+  </body>
+</html>
