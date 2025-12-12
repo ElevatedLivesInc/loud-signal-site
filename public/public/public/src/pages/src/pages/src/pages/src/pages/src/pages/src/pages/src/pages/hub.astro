@@ -1,0 +1,40 @@
+---
+import Layout from "./_layout.astro";
+---
+
+<Layout
+  title="Client Hub · ReinSolutions"
+  description="Simple hub for audits, ReinStarters, and ongoing work."
+>
+  <section class="section">
+    <h2>Rein Hub</h2>
+    <p>
+      Use this hub to share context, drop assets, and kick off work. Behind the
+      scenes, submissions can route into your n8n or automation stack.
+    </p>
+
+    <form
+      class="card"
+      method="post"
+      action="https://example.com/your-n8n-or-intake-webhook"
+    >
+      <h3>Send a new brief</h3>
+      <label>
+        Name<br />
+        <input type="text" name="name" required />
+      </label>
+      <br />
+      <label>
+        Email<br />
+        <input type="email" name="email" required />
+      </label>
+      <br />
+      <label>
+        What are you trying to launch or fix?<br />
+        <textarea name="context" rows="4" required></textarea>
+      </label>
+      <br />
+      <button class="primary-btn" type="submit">Submit brief</button>
+    </form>
+  </section>
+</Layout>
